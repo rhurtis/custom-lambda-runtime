@@ -27,7 +27,7 @@ FROM python:buster
 RUN apt-get update && \
     apt-get install -y openjdk-11-jre-headless && \
     apt-get clean;
-#ENV JAVA_HOME=/usr/bin/java/
+
 RUN export JAVA_HOME=/usr/lib/java/java-11-openjdk-amd64
 RUN export PATH=$PATH:/usr/lib/java/java-11-openjdk-amd64
 ARG JAVA_HOME="/usr/lib/java/java-11-openjdk-amd64"
