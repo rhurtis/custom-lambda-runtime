@@ -28,9 +28,9 @@ RUN apt-get update && \
     apt-get install -y openjdk-11-jre-headless && \
     apt-get clean;
 
+# Set JAVA_HOME as location of JAVA path.
 RUN export JAVA_HOME=/usr/lib/java/java-11-openjdk-amd64
-RUN export PATH=$PATH:/usr/lib/java/java-11-openjdk-amd64
-ARG JAVA_HOME="/usr/lib/java/java-11-openjdk-amd64"
+
 # Include global arg in this stage of the build
 ARG FUNCTION_DIR
 # Set working directory to function root directory
